@@ -17,6 +17,42 @@
     text-decoration: underline;
 }
 
+.card {
+    width: 20rem;
+    height: 25rem;
+}
+
 .card:hover {
     transform: scale(1.1);
+}
+
+#lugar {
+    display: flex;
+    flex-direction: column;
+}
+
+#artistas__cards {
+    display: flex;
+    flex-direction: column;
+}
+
+#concurso__img {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    #lugar {
+        flex-direction: row;
+    }
+    #lugar__img, #lugar__text {
+        width: 50%;
+    }
+
+    #artistas__cards {
+        flex-direction: row;
+    }
+
+    #concurso__img {
+        display: block;
+    }
 }

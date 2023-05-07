@@ -21,45 +21,66 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" href="#">Lugar y Fecha</a>
-              <a class="nav-link" href="#">Artistas Invitados</a>
-              <a class="nav-link" href="#">Instituciones Participantes</a>
-              <a class="nav-link" href="#">Concurso</a>
+              <a class="nav-link" href="#lugar">Lugar y Fecha</a>
+              <a class="nav-link" href="#artistas">Artistas Invitados</a>
+              <a class="nav-link" href="#instituciones">Instituciones Participantes</a>
+              <a class="nav-link" href="#concurso">Concurso</a>
             </div>
           </div>
         </div>
       </nav>
+      <div id="carouselExampleControls" class="carousel slide bg-lino" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </header>
     <main class="pt-5 p-3 bg-lino">
-      <article class="mt-5 d-flex bg-dark text-light">
-        <div class="w-50">
+      <article id="lugar" class="mx-auto mt-5 d-flex justify-content-center align-items-center bg-dark text-light">
+        <div id="lugar__img">
           <img src="./img/locro.png" alt="Locro" class="img-fluid">
         </div>
-        <div class="w-50 p-3">
+        <div id="lugar__text" class="p-3">
           <h2><strong>25 de Mayo - Las Higueras</strong></h2>
           <p class="p-1">La fiesta tradicional del 25 de Mayo en la localidad de Las Higueras en el predio del ferrocarril donde tiene lugar un concurso al mejor locro y empanadas. Probaremos las recetas de 12 instituciones participantes y disfrutaremos de las actuaciones de artistas invitados.</p>
           <p class="p-2">Entrada $200 incluye estacionamiento.</p>
           <p class="p-2">Porcion de Locro $1000, Docena de Empanadas $2400.</p>
         </div>
       </article>
-      <article class="mt-5">
+      <article id="artistas" class="mt-5">
         <h2 class="text-center"><strong>Artistas Invitados</strong></h2>
-        <div class="d-flex justify-content-center p-2">
-          <div class="card m-2 me-5 bg-dark text-light" style="width: 20rem;">
+        <div id="artistas__cards" class="d-flex justify-content-center align-items-center p-2">
+          <div class="card m-3 bg-dark text-light">
             <img src="./img/soledad_pastorutti.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Soledad Pastorutti</h5>
               <p class="card-text">El jueves 25 a las 21:00 hs abre el show de artistas Soledad Pastorutti.</p>
            </div>
           </div>
-          <div class="card m-2 me-5 bg-dark text-light" style="width: 20rem;">
+          <div class="card m-3 bg-dark text-light">
             <img src="./img/abel_pintos.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Abel Pintos</h5>
               <p class="card-text">El viernes 26 a las 22:00 hs se presenta Abel Pintos.</p>
             </div>
           </div>
-          <div class="card m-2 bg-dark text-light" style="width: 20rem;">
+          <div class="card m-3 bg-dark text-light">
             <img src="./img/francisco_benitez.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Francisco Benitez</h5>
@@ -68,7 +89,7 @@
           </div>
       </div>
       </article>
-      <article class="w-50 mt-5 p-3 mx-auto d-flex flex-column justify-content-center align-items-center bg-dark text-light">
+      <article id="instituciones" class="w-50 mt-5 p-3 mx-auto d-flex flex-column justify-content-center align-items-center bg-dark text-light">
         <h2 class="text-center"><strong>Instituciones Participantes</strong></h2>
         <ul class="p-5">
           <li class='fs-5'>Club deportivo Talleres</li>
@@ -85,10 +106,10 @@
           <li class='fs-5'>Polideportivo municipal</li>
         </ul>     
       </article>
-      <article class="mt-5">
+      <article id="concurso" class="mt-5">
         <h2 class="text-center"><strong>Concurso de Locro y Empanadas</strong></h2>
         <div class="d-flex justify-content-center mt-3">
-          <div>
+          <div id="concurso__img">
             <img src="./img/concurso.jpg" alt="concurso" class="img-fluid">
           </div>
           <div class="p-5 bg-dark text-light">
