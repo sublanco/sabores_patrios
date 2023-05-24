@@ -23,18 +23,18 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <div class="container-fluid">
-           <!--<a class="navbar-brand" href="">Festival</a>-->
-
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Festival</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                
-                <a class="nav-link" href="index.html">Festival</a>
+                <a class="nav-link" href="index.html#lugar">Lugar y Fecha</a>
+                <a class="nav-link" href="index.html#artistas">Artistas Invitados</a>
+                <a class="nav-link" href="index.html#instituciones">Instituciones Participantes</a>
+                <a class="nav-link" href="index.html#concurso">Concurso</a>
+                <a class="nav-link" href="#">Compra de Entradas</a>
               </div>
             </div>
           </div>
@@ -42,8 +42,8 @@
         
     </header>
 
-    <main class="container-fluid mt-5 p-0 pt-5">
-        <section id="tickets" class="container formulario mt-5">
+    <main class="container-fluid mt-5 p-2">
+        <section id="tickets" class="container formulario">
           <form action="" method="post">
           <div class="row mx-0 text-center">
             <div class="col border border-primary mx-1 p-3">
@@ -66,36 +66,24 @@
             </div>
           </div>
           <p class="text-secondary text-center">VENTA</p>
-          <h1 class="text-center">VALOR DE TICKET $2000</h1>
+          <h1 class="text-center">VALOR DE LA ENTRADA $2000</h1>
           <div class="row mb-3">
             <div class="col me-1">
               <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required>
-              <div class="invalid-feedback">
-                Por favor, debe ingresar un nombre.
-              </div>
             </div>   
             <div class="col ms-1">
               <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" required>
-              <div class="invalid-feedback">
-                Por favor, debe ingresar un apellido.
-              </div>
             </div> 
           </div>
           <div class="row mb-1">
             <div class="col">
               <input type="email" class="col form-control" name="correo" id="correo" placeholder="Correo" required>
-              <div class="invalid-feedback">
-                Por favor, debe ingresar un correo valido.
-              </div>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col me-1">
               <label for="cantidad">Cantidad</label>
-              <input type="text" class="form-control" name="cantidad" id="cantidad" placeholder="Cantidad" required>
-              <div class="invalid-feedback">
-                Por favor, debe ingresar un numero.
-              </div>
+              <input type="number" class="form-control" name="cantidad" id="cantidad" placeholder="Cantidad" required>
             </div>
             <div class="col ms-1">
             <label for="categoria">Categoria</label>
@@ -112,7 +100,7 @@
           </div>
           <div class="row mx-0 mb-3">
             <input type="reset" id="reset" class="col btn btn-success me-3" value="Borrar">
-            <input type="button" id="resumen" class="col btn btn-success ms-3" value="Resumen">
+            <input type="button" id="resumen" class="col btn btn-success ms-3" value="Resumen" onclick="calcular()">
           </div>
           </form>
         </section>
@@ -126,7 +114,7 @@
       <div class="footer__link"><a href="">Privacidad</a></div>
       <div class="footer__link"><a href="">Estudiantes</a></div>
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
