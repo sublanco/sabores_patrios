@@ -67,6 +67,7 @@
           </div>
           <p class="text-secondary text-center">VENTA</p>
           <h1 class="text-center">VALOR DE LA ENTRADA $2000</h1>
+          <div class="row mb-1"><p id="mensaje" class="text-center text-danger"></p></div>
           <div class="row mb-3">
             <div class="col me-1">
               <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required>
@@ -99,7 +100,7 @@
             Total a Pagar: $<span id="total"></span>
           </div>
           <div class="row mx-0 mb-3">
-            <input type="reset" id="reset" class="col btn btn-success me-3" value="Borrar">
+            <input type="reset" id="reset" class="col btn btn-success me-3" value="Borrar" onclick="borrar()">
             <input type="button" id="resumen" class="col btn btn-success ms-3" value="Resumen" onclick="calcular()">
           </div>
           </form>

@@ -9,20 +9,24 @@ function calcular(){
     let cantidad = Number(document.getElementById('cantidad').value);
 
     if(nombre === ""){
-        mensaje += 'Por favor, debe ingresar un nombre.\n';
+        mensaje += 'Por favor, debe ingresar un nombre.<br>';
     }
     if(apellido === ""){
-        mensaje += 'Por favor, debe ingresar un apellido.\n';
+        mensaje += 'Por favor, debe ingresar un apellido.<br>';
     }
     if(correo === ""){
-        mensaje += 'Por favor, debe ingresar un correo.\n';
+        mensaje += 'Por favor, debe ingresar un correo.<br>';
     }
     if(cantidad <= 0){
-        mensaje += 'Por favor, debe ingresar una cantidad mayor a cero.\n';
+        mensaje += 'Por favor, debe ingresar una cantidad mayor a cero.<br>';
     }
 
-    if(mensaje != ""){
-        alert(mensaje);
+    if(mensaje != ""){        
+        let parrafo = document.getElementById('mensaje');
+        parrafo.innerHTML = mensaje;
+
+        let total = document.getElementById('total');
+        total.innerHTML = '';
     } else {
         
         //calcular total
@@ -49,4 +53,12 @@ function calcular(){
         total.innerHTML = cantidad * 2000 * (100 - descuento) / 100;
     }
 
+}
+
+function borrar() {
+    let mensaje = document.getElementById('mensaje');
+    let total = document.getElementById('total');
+
+    mensaje.innerHTML = '';
+    total.innerHTML = '';
 }
