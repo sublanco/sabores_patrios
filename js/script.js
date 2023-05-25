@@ -6,11 +6,13 @@ function calcular(){
     
     let mensaje = '';
 
+    //obtener los valores del formulario
     let nombre = document.getElementById('nombre').value;
     let apellido = document.getElementById('apellido').value;
     let correo = document.getElementById('correo').value;
     let cantidad = Number(document.getElementById('cantidad').value);
 
+    //validar si los valores son correctos sino agregar el error a mensaje
     if(nombre === ""){
         mensaje += 'Por favor, debe ingresar un nombre.<br>';
     }
@@ -25,19 +27,19 @@ function calcular(){
     }
 
     if(mensaje != ""){    
-
+        //hay un error en la validacion entonces muestra el mensaje
         parrafo.innerHTML = mensaje;
         total.innerHTML = '';
 
     } else {
-
+        //no hay errores en la validacion
         parrafo.innerHTML = '';
         
-        //calcular total
+
         let descuento = 0;
-
         let categoria = Number(document.getElementById('categoria').value);
-
+        //selecciona el descuento de acuerdo a su categoria 
+        // 1=estudiante, 2=municipal, 3=jubilado
         switch (categoria) {
             case 1:
                 descuento = 80;
@@ -53,6 +55,7 @@ function calcular(){
                 break;
         }
 
+        //calcular total y mostrarlo
         let total = document.getElementById('total');
         total.innerHTML = cantidad * 2000 * (100 - descuento) / 100;
     }
@@ -60,6 +63,7 @@ function calcular(){
 }
 
 function borrar() {
+    //borra los mensajes de error de validacion y total calculado
     let mensaje = document.getElementById('mensaje');
     let total = document.getElementById('total');
 
