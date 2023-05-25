@@ -1,6 +1,9 @@
 function calcular(){
     
-    //validar formulario
+    //validar formulario    
+    let parrafo = document.getElementById('mensaje');
+    let total = document.getElementById('total');
+    
     let mensaje = '';
 
     let nombre = document.getElementById('nombre').value;
@@ -21,13 +24,14 @@ function calcular(){
         mensaje += 'Por favor, debe ingresar una cantidad mayor a cero.<br>';
     }
 
-    if(mensaje != ""){        
-        let parrafo = document.getElementById('mensaje');
-        parrafo.innerHTML = mensaje;
+    if(mensaje != ""){    
 
-        let total = document.getElementById('total');
+        parrafo.innerHTML = mensaje;
         total.innerHTML = '';
+
     } else {
+
+        parrafo.innerHTML = '';
         
         //calcular total
         let descuento = 0;
